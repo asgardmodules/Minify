@@ -73,7 +73,7 @@ class Minify_CSS_Compressor {
         $css = preg_replace('@>/\\*\\s*\\*/@', '>/*keep*/', $css);
         
         // preserve empty comment between property and value
-        // http://css-discuss.incutio.com/?page=BoxModelHack
+        // http://css-discuss.incutio.com/?page=BoxEntityHack
         $css = preg_replace('@/\\*\\s*\\*/\\s*:@', '/*keep*/:', $css);
         $css = preg_replace('@:\\s*/\\*\\s*\\*/@', ':/*keep*/', $css);
         

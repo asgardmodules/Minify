@@ -41,7 +41,7 @@ class Minify_YUI_CssCompressor {
         // Normalize all whitespace strings to single spaces. Easier to work with that way.
         $css = preg_replace('@\s+@', ' ', $css);
 
-        // Make a pseudo class for the Box Model Hack
+        // Make a pseudo class for the Box Entity Hack
         $css = preg_replace("@\"\\\\\"}\\\\\"\"@", "___PSEUDOCLASSBMH___", $css);
 
         // Remove the spaces before the things that should not have spaces before them.
@@ -122,7 +122,7 @@ class Minify_YUI_CssCompressor {
             }
         }
 
-        // Replace the pseudo class for the Box Model Hack
+        // Replace the pseudo class for the Box Entity Hack
         $css = str_replace("___PSEUDOCLASSBMH___", "\"\\\\\"}\\\\\"\"", $css);
 
         // Replace multiple semi-colons in a row by a single one
